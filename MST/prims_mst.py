@@ -33,7 +33,6 @@ def impL_prims(adj,src = 0):
     for i in range(len(parent)):
         parent[i] = -1
     
-    parent[1] = -1
     mst = defaultdict(set)
     vsited =set([src])
 
@@ -54,17 +53,17 @@ def impL_prims(adj,src = 0):
                     heapq.heappush(edge,(v,neigh,w))
     
     print(parent)
-    print(mst)
 
-edges = [
+
+edgeList = [
     [0,1,2],
     [0,3,6],
-    [3,1,8],
+    [1,3,8],
     [1,4,5],
     [1,2,3],
-    [2,4,7],
-  
+    [1,4,5],
+    [2,4,7]
 ]
 
-adj = create_adj(edges,0)
+adj = create_adj(edgeList,0)
 impL_prims(adj)

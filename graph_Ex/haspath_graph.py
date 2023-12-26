@@ -1,3 +1,4 @@
+from collections import defaultdict
 def addEdge(edges,direction):
     adjList = dict()
     if direction == 0:
@@ -84,3 +85,4 @@ ed_directed = [
 adj = addEdge(ed_directed,1)
 print(adj)
 print(has_pathBFS(adj,5,6))
+dics = defaultdict(list)

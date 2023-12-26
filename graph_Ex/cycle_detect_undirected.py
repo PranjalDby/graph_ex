@@ -44,7 +44,6 @@ def check_cyclic(adj):
 def isCyclic(adj,parent,ranks) -> bool:
     for i in adj:
         for j in adj[i]:
-                
                 u = findParent(i,parent)
                 v = findParent(j,parent)
                 if u == v:
@@ -53,8 +52,6 @@ def isCyclic(adj,parent,ranks) -> bool:
                     Union(u,v,parent,ranks)
 
     return False
-
-
 
 def Union(u,v,parent,ranks):
     u = findParent(u,parent)
@@ -83,6 +80,6 @@ adj = addEdge(edges,0)
 
 # Time complexity is 
 """
-
+O(V+E)
 """
-# check_cyclic(adj)
+check_cyclic(adj)
